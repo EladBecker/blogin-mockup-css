@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="screen hidden" onclick="showPage()"></div>
+    <header>
+        <div class="header-content flex space-between align-center">
+            <h1 class="logo">Blogin<span class="dot">.</span></h1>
+            <ul class="nav-menu flex space-between">
+                <a href="#" class="menu-item center-content">
+                    <li>Journal</li>
+                </a>
+                <a href="#" class="menu-item center-content">
+                    <li>About</li>
+                </a>
+                <a href="#" class="menu-item center-content">
+                    <li>work</li>
+                </a>
+                <a href="#" class="menu-item center-content">
+                    <li>contact</li>
+                </a>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <div class="main-container">
+        <section class="posts center-page">
+            <div class="post flex space-between">
+                <img src="img/posts/post-1.jpg" />
+                <div class="post-text">
+                    <h2 class="post-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="post-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                    <button class="continue-reading" onclick="toggleModal()">Continue Reading</button>
+                </div>
+            </div>
+            <div class="post flex space-between">
+                <img src="img/posts/post-2.jpg" />
+                <div class="post-text">
+                    <h2 class="post-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="post-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                    <button class="continue-reading" onclick="toggleModal()">Continue Reading</button>
+                </div>
+            </div>
+            <div class="post flex space-between">
+                <img src="img/posts/post-3.jpg" />
+                <div class="post-text">
+                    <h2 class="post-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="post-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...
+                    </p>
+                    <button class="continue-reading" onclick="toggleModal()">Continue Reading</button>
+                </div>
+            </div>
+            <div class="posts-nav flex space-between">
+                <a class="prev center-content" href="#">← &nbsp; Previous</a>
+                <a class="next center-content" href="#">next &nbsp; →</a>
+            </div>
+        </section>
+    </div>
+    <footer class="center-content">
+        <h1 class="logo">Blogin<span class="dot">.</span></h1>
+        <div class="coffee-rights">
+            © 2014 Blogin.com - All Rights Reserved - Find more free Templates at <b>Pixelhint.com</b>
+        </div>
+        <ul class="social flex">
+            <li><a class="facebook center-content" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a></li>
+            <li><a class="twitter center-content" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a></li>
+            <li><a class="behance center-content" href="#">
+                    <i class="fab fa-behance"></i>
+                </a></li>
+            <li><a class="dribbble center-content" href="#">
+                    <i class="fab fa-dribbble"></i>
+                </a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.add('menu-open');
+            document.querySelector('.screen').classList.remove('hidden');
+        }
+        function toggleModal() {
+            document.body.classList.add('modal-open');
+            document.querySelector('.screen').classList.remove('hidden');
+        }
+        function showPage() {
+            document.body.classList.remove('modal-open');
+            document.body.classList.remove('menu-open');
+            document.querySelector('.screen').classList.add('hidden');
+        }
+        function closeModal() {
+            document.body.classList.remove('modal-open');
+            document.querySelector('.screen').classList.add('hidden');
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/7e4dd38c8f.js" crossorigin="anonymous"></script>
+
+    <section class="modal center-content hidden">
+        <button class="close-modal-btn" onclick="closeModal()">X</button>
+        <h2>Join us to get access to the latest stories!</h2>
+        <form>
+            <input type="email" id="email" placeholder="Your E-mail here">
+            <br />
+            <br />
+            <button class="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
